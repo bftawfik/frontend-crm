@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 
+import Header from "./_components/header/Header"
 import SideMenu from "./_components/sideMenu/SideMenu"
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function Web() {
       <SideMenu />
 
       <div className="flex h-full w-full flex-col gap-4">
-        <div className="flex w-full items-center rounded-lg bg-white px-9 py-6 sm:px-8">header</div>
+        <Header />
         <div className="box-border flex h-[calc(100vh-64px)] gap-4">
           <div className="h-full w-[360px] rounded-lg bg-white">profile</div>
           <div className="h-full w-full rounded-lg bg-white">tabs content</div>
