@@ -1,6 +1,8 @@
 import ChartItemsListing from "app/_components/chartItemsListing/ChartItemsListing"
 import CircleProgressChart from "app/_components/circleProgressChart/CircleProgressChart"
+import SectionHeader from "app/_components/sectionHeader/SectionHeader"
 import SectionWrapper from "app/_components/sectionWrapper/SectionWrapper"
+import DiscountIcon from "app/_components/svgs/DiscountIcon"
 
 const Page = () => {
   // charts data
@@ -14,6 +16,15 @@ const Page = () => {
   return (
     <section className="bg-gray-sm relative box-border flex h-screen w-full flex-col gap-4 p-4">
       <SectionWrapper>
+        <SectionHeader
+          title="total sales"
+          subtitle="789,598,000 EGP"
+          icon={<DiscountIcon className="h-6 w-6" />}
+          rating={{
+            value: 2.75,
+            total: 5,
+          }}
+        />
         <div className="flex w-full flex-col items-center justify-between gap-10 md:flex-row">
           <ChartItemsListing chartData={circleChartData} />
           <CircleProgressChart
