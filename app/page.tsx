@@ -1,8 +1,9 @@
 import { Metadata } from "next"
 
+import Deals from "./_components/deals/Deals"
 import Header from "./_components/header/Header"
 import SideMenu from "./_components/sideMenu/SideMenu"
-import TabsComponent from "./_components/tabsComponent/TabsComponent"
+import TabsComponent, { TabTitle } from "./_components/tabsComponent/TabsComponent"
 
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",
@@ -22,14 +23,21 @@ export const metadata: Metadata = {
 }
 
 export default function Web() {
+  const tabs = [
+    { id: 1, tabTitle: TabTitle.deals, TabContent: Deals },
+    { id: 2, tabTitle: TabTitle.commitions, TabContent: Deals },
+    { id: 3, tabTitle: TabTitle.performance, TabContent: Deals },
+    { id: 4, tabTitle: TabTitle.attendance, TabContent: Deals },
+    { id: 5, tabTitle: TabTitle.activities, TabContent: Deals },
+  ]
   return (
-    <section className="bg-gray-sm relative box-border flex h-screen w-full gap-4 p-4">
+    <section className="relative box-border flex h-screen w-full gap-4 bg-gray-sm p-4">
       <SideMenu />
-      <div className="flex h-full w-full flex-col gap-4">
+      <div className="flex h-full w-full  flex-col gap-4">
         <Header />
-        <div className="box-border flex h-[calc(100vh-64px)] gap-4">
+        <div className="box-border flex h-[calc(100vh-111px)] gap-4">
           <div className="h-full w-[360px] rounded-lg bg-white">profile</div>
-          <TabsComponent />
+          <TabsComponent tabs={tabs} activeTab={TabTitle.deals} />
         </div>
       </div>
     </section>

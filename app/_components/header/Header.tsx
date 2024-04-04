@@ -6,7 +6,7 @@ import NotificationDot from "../svgs/NotificationDot"
 
 const Header = () => {
   return (
-    <div className="flex w-full items-center justify-between rounded-lg bg-white px-9 py-6 sm:px-8">
+    <div className="flex w-full items-center justify-between rounded-lg bg-white px-9 py-[15px] sm:px-8">
       <p className="text-base">Profile</p>
       <div className="flex items-center gap-2 md:gap-6">
         <div className="relative rounded-lg bg-[#F5F8FACC] p-2">
