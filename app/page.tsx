@@ -23,9 +23,8 @@ export const metadata: Metadata = {
 
 export default function Web() {
   return (
-    <section className="relative box-border flex h-screen w-full gap-4 bg-[#F3F5F8] p-4">
+    <section className="bg-gray-sm relative box-border flex h-screen w-full gap-4 p-4">
       <SideMenu />
-
       <div className="flex h-full w-full flex-col gap-4">
         <Header />
         <div className="box-border flex h-[calc(100vh-64px)] gap-4">
