@@ -2,6 +2,7 @@ import { Metadata } from "next"
 
 import Header from "./_components/header/Header"
 import SideMenu from "./_components/sideMenu/SideMenu"
+import TabsComponent from "./_components/tabsComponent/TabsComponent"
 
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",
@@ -29,7 +30,7 @@ export default function Web() {
         <Header />
         <div className="box-border flex h-[calc(100vh-64px)] gap-4">
           <div className="h-full w-[360px] rounded-lg bg-white">profile</div>
-          <div className="h-full w-full rounded-lg bg-white">tabs content</div>
+          <TabsComponent />
         </div>
       </div>
     </section>
