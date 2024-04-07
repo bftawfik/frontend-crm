@@ -14,13 +14,13 @@ const SideMenu = () => {
       <button
         type="button"
         onClick={handleOpen}
-        className="absolute mx-2 my-6 inline-flex items-center text-gray-500 hover:bg-gray-100 focus:outline-none md:hidden"
+        className="absolute mx-2 my-5 inline-flex items-center text-gray-500 hover:bg-gray-100 focus:outline-none lg:hidden"
       >
         <MenuIcon />
       </button>
       <aside
         className={clsx(
-          "fixed left-0 top-0 z-40 h-full w-[265px] -translate-x-full rounded-lg bg-white p-6 transition-transform md:relative md:translate-x-0",
+          "fixed left-0 top-0 z-40 h-full w-[265px] -translate-x-full rounded-lg bg-white p-6 transition-transform lg:relative lg:translate-x-0",
           { "translate-x-0": open },
           {
             "-translate-x-full": !open,
