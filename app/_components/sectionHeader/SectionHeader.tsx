@@ -7,6 +7,7 @@ interface SectionHeaderProps {
   titleClassName?: string
   subtitleClassName?: string
   rating?: { value: number; total: number }
+  rightContent?: React.ReactNode
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({
@@ -16,6 +17,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   titleClassName = "text-xs font-semibold text-[#B5B5C3] capitalize",
   subtitleClassName = "text-sm font-semibold",
   rating,
+  rightContent,
 }) => {
   return (
     <div className="flex w-full items-center justify-between">
@@ -32,6 +34,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           <div className="text-[10px] font-light">Out of {rating.total}</div>
         </div>
       )}
+      {rightContent && rightContent}
     </div>
   )
 }

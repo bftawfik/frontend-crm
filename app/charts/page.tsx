@@ -1,8 +1,10 @@
+import BarChartWith2Lines from "app/_components/barChartWith2Lines/BarChartWith2Lines"
 import ChartItemsListing from "app/_components/chartItemsListing/ChartItemsListing"
 import CircleProgressChart from "app/_components/circleProgressChart/CircleProgressChart"
 import SectionHeader from "app/_components/sectionHeader/SectionHeader"
 import SectionWrapper from "app/_components/sectionWrapper/SectionWrapper"
 import DiscountIcon from "app/_components/svgs/DiscountIcon"
+import { salesData } from "app/_mocks/chartsData"
 
 const Page = () => {
   // charts data
@@ -37,6 +39,11 @@ const Page = () => {
             }
           />
         </div>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <SectionHeader title="total sales" subtitle="200.000.000 EGP" rightContent={<div className="text-sm font-semibold text-black">2021</div>} />
+        <BarChartWith2Lines data={salesData}  />
       </SectionWrapper>
     </section>
   )
