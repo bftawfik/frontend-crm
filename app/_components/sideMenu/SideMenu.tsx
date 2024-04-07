@@ -27,7 +27,7 @@ const SideMenu = () => {
           }
         )}
       >
-        <button className={clsx("absolute end-1 top-1 md:hidden")} onClick={handleOpen}>
+        <button className={clsx("absolute end-1 top-1 lg:hidden")} onClick={handleOpen}>
           <XIcon className="h-6 w-6" />
         </button>
         {/* menu content */}
