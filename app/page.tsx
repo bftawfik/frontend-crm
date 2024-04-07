@@ -2,6 +2,7 @@ import { Metadata } from "next"
 
 import Deals from "./_components/deals/Deals"
 import Header from "./_components/header/Header"
+import ProfileSection from "./_components/profileSection/ProfileSection"
 import SideMenu from "./_components/sideMenu/SideMenu"
 import TabsComponent, { TabTitle } from "./_components/tabsComponent/TabsComponent"
 
@@ -35,8 +36,8 @@ export default function Web() {
       <SideMenu />
       <div className="flex h-full w-full  flex-col gap-4">
         <Header />
-        <div className="box-border flex h-[calc(100vh-111px)] gap-4">
-          <div className="h-full w-[360px] rounded-lg bg-white">profile</div>
+        <div className="box-border flex h-[calc(100vh-111px)] flex-wrap gap-4 md:flex-nowrap">
+          <ProfileSection />
           <TabsComponent tabs={tabs} activeTab={TabTitle.deals} />
         </div>
       </div>
