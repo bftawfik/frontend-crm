@@ -7,8 +7,6 @@ interface CircleProgressChartProps {
   strokeWidth?: number
   innerRadius?: number
   colors?: string[]
-  height?: number
-  width?: number
   className?: string
 }
 
@@ -17,12 +15,12 @@ const CircleProgressChart: React.FC<CircleProgressChartProps> = ({
   label,
   innerRadius = 80,
   strokeWidth = 30,
-  className = "relative h-64 w-full sm:h-48 md:h-64 lg:h-72 xl:h-80 flex justify-center items-center",
+  className = "relative w-full max-h-[260px]  flex justify-center items-center",
 }) => {
   return (
     <div className={className}>
-      <ResponsiveContainer width="100%" height="100%">
-        <PieChart>
+      <ResponsiveContainer height="100%"  aspect={1}>
+        <PieChart height={150}>
           <Pie
             data={data}
             cx="50%"
