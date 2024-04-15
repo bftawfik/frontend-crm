@@ -13,14 +13,14 @@ interface CircleProgressChartProps {
 const CircleProgressChart: React.FC<CircleProgressChartProps> = ({
   data,
   label,
-  innerRadius = 80,
-  strokeWidth = 30,
-  className = "relative w-full max-h-[260px]  flex justify-center items-center",
+  innerRadius = 58,
+  strokeWidth = 22,
+  className = "relative w-full flex justify-center items-center",
 }) => {
   return (
     <div className={className}>
-      <ResponsiveContainer height="100%"  aspect={1}>
-        <PieChart height={150}>
+      <ResponsiveContainer width="48.5%" aspect={1}>
+        <PieChart>
           <Pie
             data={data}
             cx="50%"

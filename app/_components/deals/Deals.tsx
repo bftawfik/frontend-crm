@@ -8,7 +8,6 @@ import CustomizedBarChart from "../customizedBarChart/CustomizedBarChart"
 import MyDealsSection from "../myDealsSection/MyDealsSection"
 import SectionHeader from "../sectionHeader/SectionHeader"
 import SectionWrapper from "../sectionWrapper/SectionWrapper"
-import DiscountIcon from "../svgs/DiscountIcon"
 import YearQuarterPicker from "../yearQuarterPicker/YearQuarterPicker"
 
 const circleChartData = [
@@ -42,16 +41,8 @@ const Deals = () => {
         <CustomizedBarChart data={salesData} />
       </SectionWrapper>
       <SectionWrapper>
-        <SectionHeader
-          title="total sales"
-          subtitle="789,598,000 EGP"
-          icon={<DiscountIcon className="h-6 w-6" />}
-          rating={{
-            value: 2.75,
-            total: 5,
-          }}
-        />
-        <div className="flex w-full flex-col items-center justify-between gap-10 md:flex-row">
+        <SectionHeader title="Stage" titleClassName="text-sm text-black" />
+        <div className="flex w-full flex-col items-center justify-between gap-4 xl:gap-10 xl:flex-row">
           <ChartItemsListing chartData={circleChartData} />
           <CircleProgressChart
             data={circleChartData}
