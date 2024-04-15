@@ -1,7 +1,7 @@
 "use client"
-import BarChartWith2Lines from "app/_components/barChartWith2Lines/BarChartWith2Lines"
 import ChartItemsListing from "app/_components/chartItemsListing/ChartItemsListing"
 import CircleProgressChart from "app/_components/circleProgressChart/CircleProgressChart"
+import CustomizedBarChart from "app/_components/customizedBarChart/CustomizedBarChart"
 import SectionHeader from "app/_components/sectionHeader/SectionHeader"
 import SectionWrapper from "app/_components/sectionWrapper/SectionWrapper"
 import DiscountIcon from "app/_components/svgs/DiscountIcon"
@@ -45,7 +45,7 @@ const Page = () => {
 
       <SectionWrapper>
         <SectionHeader title="total sales" subtitle="200.000.000 EGP" rightContent={<YearQuarterPicker />} />
-        <BarChartWith2Lines data={salesData} />
+        <CustomizedBarChart data={salesData} />
       </SectionWrapper>
     </section>
   )
