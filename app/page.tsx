@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 
+import Activities from "./_components/activities/Activities"
 import Deals from "./_components/deals/Deals"
 import Header from "./_components/header/Header"
 import ProfileSection from "./_components/profileSection/ProfileSection"
@@ -29,7 +30,7 @@ export default function Web() {
     { id: 2, tabTitle: TabTitle.commitions, TabContent: Deals },
     { id: 3, tabTitle: TabTitle.performance, TabContent: Deals },
     { id: 4, tabTitle: TabTitle.attendance, TabContent: Deals },
-    { id: 5, tabTitle: TabTitle.activities, TabContent: Deals },
+    { id: 5, tabTitle: TabTitle.activities, TabContent: Activities },
   ]
   return (
     <section className="relative box-border flex h-screen w-full gap-4 bg-gray-sm p-4">

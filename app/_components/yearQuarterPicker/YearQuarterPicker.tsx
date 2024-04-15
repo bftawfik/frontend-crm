@@ -26,20 +26,20 @@ interface YearQuarterPickerProps {
 }
 const YearQuarterPicker = ({ year, quarter, setYear, setQuarter }: YearQuarterPickerProps) => {
   return (
-    <div className="relative flex w-[164px] items-center gap-2 rounded-md border border-[#eff2f5] p-1">
+    <div className="relative flex min-w-[164px] items-center  justify-stretch rounded-md border border-[#eff2f5] p-1">
       <DropdownList
         list={years}
         title="Years"
         selectedValue={year}
         onSelect={setYear}
-        className="flex   shrink-0 items-center gap-1 rounded-md bg-[#F5F8FA] py-2 pl-4  pr-3  text-sm font-medium text-[#5e6278] focus-within:outline-none"
+        className="flex  shrink-0 items-center gap-1 rounded-md bg-[#F5F8FA] py-2 pl-4 pr-3  text-sm font-medium text-[#5e6278] focus-within:outline-none"
       />
       <DropdownList
         list={quarters}
         title="Quarters"
         selectedValue={quarter || 0}
         onSelect={setQuarter}
-        className="box-border flex shrink-0 items-center gap-1 rounded-md py-2 pl-4 pr-3  text-sm font-medium text-[#5e6278] focus-within:outline-none"
+        className="box-border flex shrink-0 items-center gap-1 rounded-md px-4 py-2  text-sm font-medium text-[#5e6278] focus-within:outline-none"
         enabled={!!year}
       />
     </div>
