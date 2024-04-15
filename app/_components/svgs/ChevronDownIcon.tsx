@@ -1,9 +1,9 @@
-const ChevronDownIcon: React.FC<SvgProps> = ({ className, width = 18, height = 18, fill = "none" }) => {
+const ChevronDownIcon: React.FC<SvgProps> = ({ className, width = 3, height = 6, fill = "none" }) => {
   return (
     <svg
       width={width}
       height={height}
-      viewBox="0 0 8 5"
+      viewBox={`0 0 ${width} ${height}`}
       fill={fill}
       xmlns="http://www.w3.org/2000/svg"
       className={className}

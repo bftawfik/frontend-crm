@@ -32,8 +32,11 @@ export function DropdownList({
   const selectedTitle = selectedItem ? selectedItem.title : title
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className={clsx(className, { "pointer-events-none opacity-60": !enabled })}>
-        {selectedTitle} <ChevronDownIcon className="w-2" />
+      <DropdownMenuTrigger
+        className={clsx(className, { "pointer-events-none w-full shrink-0 items-center gap-1 opacity-60": !enabled })}
+      >
+        {selectedTitle}
+        <ChevronDownIcon className="w-3" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         {list.map(({ id, title }) => (
