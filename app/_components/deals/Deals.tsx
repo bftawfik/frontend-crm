@@ -1,6 +1,7 @@
 "use client"
-import React from "react"
+import React, { useState } from "react"
 import { salesData } from "app/_mocks/chartsData"
+import { dealsData } from "app/_mocks/dealsData"
 import ChartItemsListing from "../chartItemsListing/ChartItemsListing"
 import CircleProgressChart from "../circleProgressChart/CircleProgressChart"
 import CustomizedBarChart from "../customizedBarChart/CustomizedBarChart"
@@ -18,13 +19,28 @@ const circleChartData = [
 const totalDeals = circleChartData.reduce((total, item) => total + item.value, 0)
 
 const Deals = () => {
+  const [selectedYear, setSelectedYear] = useState<number | undefined>(2024)
+  const [selectedQuarter, setSelectedQuarter] = useState<number>(0)
+  const [salesSelectedYear, setSalesSelectedYear] = useState<number | undefined>(undefined)
+  const [salesSelectedQuarter, setSalesSelectedQuarter] = useState<number>(0)
   return (
     <div className="flex flex-col gap-4">
       <SectionWrapper>
-        <SectionHeader title="total sales" subtitle="200.000.000 EGP" subtitleClassName="text-lg font-bold" rightContent={<YearQuarterPicker />} />
+        <SectionHeader
+          title="total sales"
+          subtitle="200.000.000 EGP"
+          subtitleClassName="text-lg font-bold"
+          rightContent={
+            <YearQuarterPicker
+              year={salesSelectedYear}
+              setYear={setSalesSelectedYear}
+              quarter={salesSelectedQuarter}
+              setQuarter={setSalesSelectedQuarter}
+            />
+          }
+        />
         <CustomizedBarChart data={salesData} />
       </SectionWrapper>
-
       <SectionWrapper>
         <SectionHeader
           title="total sales"
@@ -48,7 +64,14 @@ const Deals = () => {
           />
         </div>
       </SectionWrapper>
-      <MyDealsSection />
+      <MyDealsSection
+        title="MyDeals"
+        dealsData={dealsData}
+        year={selectedYear}
+        setYear={setSelectedYear}
+        quarter={selectedQuarter}
+        setQuarter={setSelectedQuarter}
+      />
     </div>
   )
 }
