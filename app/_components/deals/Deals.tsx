@@ -1,8 +1,10 @@
+"use client"
 import React from "react"
 import { salesData } from "app/_mocks/chartsData"
 import BarChartWith2Lines from "../barChartWith2Lines/BarChartWith2Lines"
 import ChartItemsListing from "../chartItemsListing/ChartItemsListing"
 import CircleProgressChart from "../circleProgressChart/CircleProgressChart"
+import MyDealsSection from "../myDealsSection/MyDealsSection"
 import SectionHeader from "../sectionHeader/SectionHeader"
 import SectionWrapper from "../sectionWrapper/SectionWrapper"
 import DiscountIcon from "../svgs/DiscountIcon"
@@ -46,6 +48,7 @@ const Deals = () => {
           />
         </div>
       </SectionWrapper>
+      <MyDealsSection />
     </div>
   )
 }
