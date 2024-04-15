@@ -2,14 +2,11 @@
 import React, { useState } from "react"
 import { salesData } from "app/_mocks/chartsData"
 import { dealsData } from "app/_mocks/dealsData"
-import ChartItemsListing from "../chartItemsListing/ChartItemsListing"
-import CircleProgressChart from "../circleProgressChart/CircleProgressChart"
 import MyDealsSection from "../myDealsSection/MyDealsSection"
-import SectionHeader from "../sectionHeader/SectionHeader"
-import SectionWrapper from "../sectionWrapper/SectionWrapper"
+import Stage from "../stage/Stage"
 import TotalSale from "../totalSale/TotalSale"
 
-const circleChartData = [
+const circleChartData: ChartItem[] = [
   { name: "Contract", value: 12, color: "#9FB5C1" },
   { name: "Reservation", value: 5, color: "#D2DCE0" },
   { name: "EOI", value: 8, color: "#E6EEF1" },
@@ -32,21 +29,7 @@ const Deals = () => {
         setQuarter={setSalesSelectedQuarter}
         data={salesData}
       />
-      <SectionWrapper>
-        <SectionHeader title="Stage" titleClassName="text-sm text-black" />
-        <div className="flex w-full flex-col items-center justify-between gap-4 xl:gap-10 xl:flex-row">
-          <ChartItemsListing chartData={circleChartData} />
-          <CircleProgressChart
-            data={circleChartData}
-            label={
-              <div className="flex flex-col items-center justify-center gap-1 ">
-                <p className="text-left text-sm text-[#b5b5c3]">Total Deals</p>
-                <span className="text-left text-lg font-bold text-black">{totalDeals}</span>
-              </div>
-            }
-          />
-        </div>
-      </SectionWrapper>
+      <Stage title="Stage" totalDeals={totalDeals} data={circleChartData} />
       <MyDealsSection
         title="MyDeals"
         dealsData={dealsData}

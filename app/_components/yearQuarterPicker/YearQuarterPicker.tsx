@@ -37,7 +37,7 @@ const YearQuarterPicker = ({ year, quarter, setYear, setQuarter }: YearQuarterPi
       <DropdownList
         list={quarters}
         title="Quarters"
-        selectedValue={quarter}
+        selectedValue={quarter || 0}
         onSelect={setQuarter}
         className="flex gap-1 rounded-md px-4 py-2 text-sm font-medium text-[#5e6278] focus-within:outline-none"
         enabled={!!year}
