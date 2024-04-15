@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react"
+import React from "react"
 import { DropdownList } from "../dropdownList/DropdownList"
 
 const years = [
@@ -20,9 +20,9 @@ const quarters = [
 
 interface YearQuarterPickerProps {
   year?: number
-  quarter: number
+  quarter?: number
   setYear: React.Dispatch<React.SetStateAction<number | undefined>>
-  setQuarter: React.Dispatch<React.SetStateAction<number>>
+  setQuarter: React.Dispatch<React.SetStateAction<number | undefined>>
 }
 const YearQuarterPicker = ({ year, quarter, setYear, setQuarter }: YearQuarterPickerProps) => {
   return (
