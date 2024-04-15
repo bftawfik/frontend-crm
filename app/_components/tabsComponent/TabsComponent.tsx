@@ -7,7 +7,7 @@ interface TabsListItem {
 }
 export enum TabTitle {
   deals = "deals",
-  commitions = "commitions",
+  commission = "commission",
   performance = "performance",
   attendance = "attendance",
   activities = "activities",
