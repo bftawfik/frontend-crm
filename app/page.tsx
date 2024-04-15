@@ -1,10 +1,12 @@
 import { Metadata } from "next"
 
+import Commission from "./_components/commission/Commission"
 import Deals from "./_components/deals/Deals"
 import Header from "./_components/header/Header"
 import ProfileSection from "./_components/profileSection/ProfileSection"
 import SideMenu from "./_components/sideMenu/SideMenu"
 import TabsComponent, { TabTitle } from "./_components/tabsComponent/TabsComponent"
+import Performance from "./_components/performance/Performance"
 
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",
@@ -26,8 +28,8 @@ export const metadata: Metadata = {
 export default function Web() {
   const tabs = [
     { id: 1, tabTitle: TabTitle.deals, TabContent: Deals },
-    { id: 2, tabTitle: TabTitle.commitions, TabContent: Deals },
-    { id: 3, tabTitle: TabTitle.performance, TabContent: Deals },
+    { id: 2, tabTitle: TabTitle.commission, TabContent: Commission },
+    { id: 3, tabTitle: TabTitle.performance, TabContent: Performance },
     { id: 4, tabTitle: TabTitle.attendance, TabContent: Deals },
     { id: 5, tabTitle: TabTitle.activities, TabContent: Deals },
   ]
