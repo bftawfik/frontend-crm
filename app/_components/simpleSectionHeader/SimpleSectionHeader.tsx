@@ -5,13 +5,13 @@ interface SimpleSectionHeaderProps {
   title: string
   subtitle?: string
   icon?: React.ReactNode
-  titleClassName?: string
+  subtitleClassName?: string
   rating?: { value: number; total: number }
   rightContent?: React.ReactNode
 }
 
 const SimpleSectionHeader: React.FC<SimpleSectionHeaderProps> = (props) => {
-  return <SectionHeader subtitleClassName="text-lg font-bold" {...props} />
+  return <SectionHeader titleClassName="text-sm text-black" {...props} />
 }
 
 export default SimpleSectionHeader
