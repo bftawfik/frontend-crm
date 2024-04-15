@@ -1,9 +1,9 @@
 "use client"
 import React from "react"
 import { salesData } from "app/_mocks/chartsData"
-import BarChartWith2Lines from "../barChartWith2Lines/BarChartWith2Lines"
 import ChartItemsListing from "../chartItemsListing/ChartItemsListing"
 import CircleProgressChart from "../circleProgressChart/CircleProgressChart"
+import CustomizedBarChart from "../customizedBarChart/CustomizedBarChart"
 import MyDealsSection from "../myDealsSection/MyDealsSection"
 import SectionHeader from "../sectionHeader/SectionHeader"
 import SectionWrapper from "../sectionWrapper/SectionWrapper"
@@ -21,8 +21,8 @@ const Deals = () => {
   return (
     <div className="flex flex-col gap-4">
       <SectionWrapper>
-        <SectionHeader title="total sales" subtitle="200.000.000 EGP" rightContent={<YearQuarterPicker />} />
-        <BarChartWith2Lines data={salesData} />
+        <SectionHeader title="total sales" subtitle="200.000.000 EGP" subtitleClassName="text-lg font-bold" rightContent={<YearQuarterPicker />} />
+        <CustomizedBarChart data={salesData} />
       </SectionWrapper>
 
       <SectionWrapper>
