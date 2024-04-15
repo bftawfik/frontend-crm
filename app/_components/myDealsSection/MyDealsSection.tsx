@@ -15,9 +15,9 @@ interface MyDealsSectionProps {
   title: string
   dealsData: DealItem[]
   year?: number
-  quarter: number
+  quarter?: number
   setYear: React.Dispatch<React.SetStateAction<number | undefined>>
-  setQuarter: React.Dispatch<React.SetStateAction<number>>
+  setQuarter: React.Dispatch<React.SetStateAction<number | undefined>>
 }
 const MyDealsSection = ({ title, dealsData, year, setYear, quarter, setQuarter }: MyDealsSectionProps) => {
   const activeYearDeals = dealsData.filter((item) => item.year === year)

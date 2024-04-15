@@ -15,7 +15,7 @@ const totalDeals = circleChartData.reduce((total, item) => total + item.value, 0
 
 const Deals = () => {
   const [selectedYear, setSelectedYear] = useState<number | undefined>(2024)
-  const [selectedQuarter, setSelectedQuarter] = useState<number>(0)
+  const [selectedQuarter, setSelectedQuarter] = useState<number | undefined>(0)
   const [salesSelectedYear, setSalesSelectedYear] = useState<number | undefined>(2024)
   const [salesSelectedQuarter, setSalesSelectedQuarter] = useState<number | undefined>()
   return (
