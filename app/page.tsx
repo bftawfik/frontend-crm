@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 
+import AttendanceTabContent from "./_components/attendanceTabContent/AttendanceTabContent"
 import Deals from "./_components/deals/Deals"
 import Header from "./_components/header/Header"
 import ProfileSection from "./_components/profileSection/ProfileSection"
@@ -28,17 +29,17 @@ export default function Web() {
     { id: 1, tabTitle: TabTitle.deals, TabContent: Deals },
     { id: 2, tabTitle: TabTitle.commitions, TabContent: Deals },
     { id: 3, tabTitle: TabTitle.performance, TabContent: Deals },
-    { id: 4, tabTitle: TabTitle.attendance, TabContent: Deals },
+    { id: 4, tabTitle: TabTitle.attendance, TabContent: AttendanceTabContent },
     { id: 5, tabTitle: TabTitle.activities, TabContent: Deals },
   ]
   return (
     <section className="relative box-border flex h-screen w-full gap-4 bg-gray-sm p-4">
       <SideMenu />
-      <div className="flex h-full w-full  flex-col gap-4">
+      <div className="flex h-full w-full flex-col gap-4">
         <Header />
         <div className="box-border flex h-[calc(100vh-111px)] flex-wrap gap-4 md:flex-nowrap">
           <ProfileSection />
-          <TabsComponent tabs={tabs} activeTab={TabTitle.deals} />
+          <TabsComponent tabs={tabs} activeTab={TabTitle.attendance} />
         </div>
       </div>
     </section>
