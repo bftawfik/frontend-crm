@@ -3,6 +3,7 @@ import React from "react"
 import { Separator } from "components/ui/separator"
 import profilePic from "../../../profile.png"
 import PersonalInfoCard from "../personalInfoCard/PersonalInfoCard"
+import StatusTag from "../statusTag/StatusTag"
 
 const ProfileSection = () => {
   const personalInfo = [
@@ -20,9 +21,7 @@ const ProfileSection = () => {
         <Image src={profilePic} alt="userImage" width={84} height={84} className="rounded-full" />
         <div className=" flex  flex-col items-center gap-2">
           <p className="text-base font-semibold">Muhammed Abdelhamid Midany</p>
-          <div className="w-28 rounded-[6px] border border-[#00BC70] bg-[#00BC7026] py-1 text-center text-xs  font-medium text-[#00BC70]">
-            Ux designer
-          </div>
+          <StatusTag label="UX Designer" />
         </div>
       </div>
       <div className="flex w-full items-center justify-around rounded-xl border border-[#E8EBEF]  p-3">
