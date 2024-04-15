@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "gray-sm": "#F3F5F8",
         "gray-md": "#F3F6F9",
+        "gray-lg": "#B5B5C3",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -70,6 +71,9 @@ module.exports = {
       },
       boxShadow: {
         main: "0px 0px 20px 0 rgba(76,87,125,0.02)",
+      },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
       },
     },
   },
