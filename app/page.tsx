@@ -5,6 +5,7 @@ import Header from "./_components/header/Header"
 import ProfileSection from "./_components/profileSection/ProfileSection"
 import SideMenu from "./_components/sideMenu/SideMenu"
 import TabsComponent, { TabTitle } from "./_components/tabsComponent/TabsComponent"
+import CommissionHistory from "./_components/commissionHistory/CommissionHistory"
 
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",
@@ -40,6 +41,7 @@ export default function Web() {
           <ProfileSection />
           <TabsComponent tabs={tabs} activeTab={TabTitle.deals} />
         </div>
+            <CommissionHistory  />
       </div>
     </section>
   )
