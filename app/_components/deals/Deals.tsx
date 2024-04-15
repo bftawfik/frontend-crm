@@ -6,6 +6,7 @@ import CircleProgressChart from "../circleProgressChart/CircleProgressChart"
 import SectionHeader from "../sectionHeader/SectionHeader"
 import SectionWrapper from "../sectionWrapper/SectionWrapper"
 import DiscountIcon from "../svgs/DiscountIcon"
+import YearQuarterPicker from "../yearQuarterPicker/YearQuarterPicker"
 
 const circleChartData = [
   { name: "Contract", value: 12, color: "#9FB5C1" },
@@ -18,14 +19,10 @@ const Deals = () => {
   return (
     <div className="flex flex-col gap-4">
       <SectionWrapper>
-        <SectionHeader
-          title="total sales"
-          subtitle="200.000.000 EGP"
-          rightContent={<div className="text-sm font-semibold text-black">2021</div>}
-        />
+        <SectionHeader title="total sales" subtitle="200.000.000 EGP" rightContent={<YearQuarterPicker />} />
         <BarChartWith2Lines data={salesData} />
       </SectionWrapper>
-      
+
       <SectionWrapper>
         <SectionHeader
           title="total sales"
